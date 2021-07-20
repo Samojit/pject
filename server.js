@@ -10,6 +10,7 @@ const expressLayouts = require('express-ejs-layouts')
 
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/author') 
+const bookRouter = require('./routes/books') 
 
 app.set('view engine',"ejs")
 app.set('views',__dirname + '/views')
@@ -35,6 +36,7 @@ console.log("Connection not Successful")
 
 app.use("/",indexRouter)
 app.use("/authors", authorRouter)
+app.use("/books", bookRouter)
 
 
 // const port = process.env.PORT || 3000;
